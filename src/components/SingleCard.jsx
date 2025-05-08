@@ -83,7 +83,15 @@ const SingleCard = ({ data, setData }) => {
       </button>
       {openPop && (
         <div className="open-pop">
-          <div>
+          <div className="animate__animated animate__bounceIn">
+            <button
+              className="close "
+              onClick={() => {
+                setOpenPop(false);
+              }}
+            >
+              x
+            </button>
             <h1>Add Product</h1>
             <input
               type="text"
@@ -112,7 +120,10 @@ const SingleCard = ({ data, setData }) => {
       )}
       <div className="single-card">
         {data.map((item, index) => (
-          <div className="card animate__animated animate__fadeInUp" key={index}>
+          <div
+            className="card animate__animated animate__fadeInDown"
+            key={index}
+          >
             <img src={item.image} alt="" />
             <h1>{item.title.slice(0, 16)}...</h1>
             <h3>${item.price}</h3>
