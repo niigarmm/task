@@ -1,0 +1,241 @@
+@tailwind base;
+@tailwind components;
+@import url('https://fonts.googleapis.com/css2?family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Modak&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&family=Righteous&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rowdies:wght@300;400;700&display=swap');
+@tailwind utilities;
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+.card {
+    height: 420px;
+    width: 220px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-block: 20px;
+    padding-inline: 20px;
+    transition: .5s;
+    background: rgb(244, 243, 243);
+
+    img {
+        width: 220px;
+        border-radius: 10px;
+        height: 240px;
+        transition: .5s;
+
+    }
+
+    h1 {
+        font-size: 22px;
+        margin-top: 20px;
+    }
+
+    h3 {
+        margin-block: 0 !important;
+    }
+
+    .rating {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .buttons {
+        gap: 10px;
+        display: flex;
+
+        button {
+            transition: .5s;
+
+            height: 39px;
+            cursor: pointer;
+            font-weight: 500;
+            width: 95px;
+            border-radius: 10px;
+            background-color: white;
+            border: 1px solid rgba(128, 128, 128, 0.411);
+        }
+    }
+}
+
+.card:hover {
+    transition: .5s;
+    width: 260px;
+    height: 450px;
+    cursor: pointer;
+
+    img {
+        width: 260px;
+        height: 280px;
+        transition: .5s;
+    }
+
+    button {
+        width: 120px;
+        transition: .5s;
+
+    }
+}
+
+.single-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 30px;
+    flex-wrap: wrap;
+
+}
+
+.open-pop {
+    width: 100%;
+    height: 100vh;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.255);
+    position: fixed;
+    z-index: 10000;
+    left: 0 !important;
+    top: 0;
+
+    h1 {
+        text-align: center;
+    }
+
+    div {
+        width: 400px;
+        height: 500px;
+        background-color: white;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        padding-inline: 20px;
+
+        input {
+            height: 35px;
+            border-radius: 20px;
+            border: 1px solid grey;
+            padding-left: 10px;
+            margin-top: 30px;
+            outline: none;
+        }
+
+        button {
+            margin-top: 30px;
+            height: 40px;
+            outline: none;
+            cursor: pointer;
+            border-radius: 20px;
+            border: 1px solid grey;
+            font-weight: 700;
+        }
+    }
+}
+
+.add {
+    background-color: rgb(237, 218, 254);
+    color: blueviolet;
+    margin-left: 70px;
+    height: 40px;
+    width: 140px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 800;
+}
+
+.add:hover {
+    background-color: blueviolet;
+    color: white;
+}
+
+.product-detail {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+
+    .back {
+        margin-top: 20px;
+        height: 45px;
+        width: 150px;
+        background-color: rgb(157, 157, 224);
+        color: white;
+        font-weight: 800;
+        border: 1px solid blueviolet;
+        font-size: 15px;
+        border-radius: 20px;
+        transition: .6s;
+        cursor: pointer;
+    }
+
+    .back:hover {
+        background: #000;
+        transition: .6s;
+    }
+
+    .buttons {
+        display: flex;
+        gap: 20px;
+
+        button {
+            height: 45px;
+            border-radius: 20px;
+            border: 1px solid grey;
+            width: 200px;
+            font-size: 19px;
+        }
+    }
+}
+
+.name {
+    position: static !important;
+    margin-left: 70px;
+}
+
+.title {
+    position: absolute;
+    left: 50px;
+    top: 0px;
+    color: rgb(162, 192, 217);
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.detail {
+    border-radius: 20px;
+    width: 90%;
+    background: rgb(232, 231, 231);
+    padding-inline: 30px;
+    display: flex;
+    gap: 50px;
+    padding-block: 30px;
+    display: flex;
+
+    img {
+        width: 25%;
+        border-radius: 20px;
+    }
+
+    .price {
+        color: black;
+        font-weight: 700;
+        font-size: 30px;
+    }
+
+    span {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 20px;
+        color: rgb(124, 124, 124);
+    }
+}
